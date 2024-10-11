@@ -1,10 +1,6 @@
-Let's learn Flox
-
 First of all, let's download Flox, since that will take a while. Click the following command to run it:
 
 `sudo wget https://downloads.flox.dev/by-env/stable/deb/flox-1.3.3.x86_64-linux.deb && sudo dpkg -i ./flox-1.3.3.x86_64-linux.deb`{{exec}}
-
----
 
 While we wait for that to finish, let's get to know Flox. 
 
@@ -14,11 +10,9 @@ Flox environments are not just isolated but also portable across architectures, 
 
 In this tutorial, we are going to integrate into a small project, manage dependencies, and how we would add new ones.
 
----
-
 When the installation is complete, run the following command to check that flox is installed properly:
 
-`flox --version`{{exec}}
+`flox --version`
 
 Which should output the installed flox version:
 
