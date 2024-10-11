@@ -3,11 +3,11 @@
     "description": "Learn how to create and use Flox environments in an existing project.",
     "details": {
         "intro": {
-            "text": "intro.md"
+            "text": "intro/intro.md"
         },
         "steps": [
             {
-                "text": "step1.md"
+                "text": "step1/step1.md"
             }
         ]
     },
