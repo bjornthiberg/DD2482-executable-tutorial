@@ -31,7 +31,7 @@
         ],
         "finish": {
             "title": "Finish",
-            "test": "finish/finish.md",
+            "text": "finish/finish.md",
             "foreground": "finish/foreground.sh"
         }
     },

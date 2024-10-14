@@ -5,13 +5,13 @@ To start off we need to retrieve the project we will be working on. In this case
 Run the following to to clone the repository for the example project and move into the directory:
 
 `git clone https://github.com/bjornthiberg/DD2482-executable-tutorial-project &&
-cd DD2482-executable-tutorial-project`
+cd DD2482-executable-tutorial-project`{{copy}}
 
 We can now proceed to initialize our Flox environment for the project by running the following command: 
 
 `flox init --auto-setup`
 
-Flox will infer that we are working on a python project, and using the  `--auto-setup` option will automatically proceed to include a python installation in our environment.
+Flox will infer that we are working on a python project, and using the  `--auto-setup`{{}} option will automatically proceed to include a python installation in our environment.
 
 Basically, `flox init`{{}} does the following:
 - Creates a new Flox environment, with the same name as the directory.
