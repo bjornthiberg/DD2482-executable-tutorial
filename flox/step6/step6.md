@@ -31,5 +31,6 @@ tree.pkg-path = "tree"
 ```
 
 The manifest can be edited with `flox edit`. You can read more about the specific contents of the manifest file [here](https://flox.dev/docs/concepts/manifest/).
+(Running `flox edit` will open vim, a command line editor which can be tricky for newcomers. If you get stuck in vim there are some instructions in the following step)
 
 Let's move on to looking at a case where we directly edit the manifest, by exploring how environment variables and services are managed in Flox!

@@ -13,6 +13,11 @@ FLASK_ENV=development
 FLASK_DEBUG=1
 ```
 
+In order to make changes to a file nagivate to the line you want to edit, and enter `i` for insert mode.
+Once you have finished making your changes press `Esc` to go back to normal mode.
+When in normal mode you can press `:` to enter command mode, in which you can type `wq` and the `Enter` key to save your changes and exit vim.
+
+
 # Services
 Flox also allows us to configure `services`{{}}, which are any long-running programs which are application are dependent on. Any programs or applications defined as `services`{{}} will automatically run when the Flox environment is activated.
 
