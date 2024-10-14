@@ -28,7 +28,9 @@ vars.port = 3000
 
 As our Flox environment is already up and running, these services will not automatically start.
 
-Instead we can run the command `flox services start`.
+Let us first terminate the current Flask application by running `fg` followed by entering `Ctrl-C`
+
+We can now run the command `flox services start` in order to activate our defined Flask service.
 
 If we were to make further changes to the services defined in our manifest, we could also activate these changes by running the command `flox services restart`.
 
