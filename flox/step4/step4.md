@@ -17,7 +17,7 @@ Now, let's run the Flask application again. This time, we also append a '&', so 
 
 `python run.py &`
 
-Let's double-check that the server is up and running, by sending a request to the api:
+Let's double-check that the server is up and running, by sending a request to **ANY** of the api endpoints:
 
 `curl 127.0.0.1:3000/api`
 

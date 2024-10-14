@@ -22,7 +22,7 @@ To confirm that we have installed jq correctly, run the following command to see
 
 `which jq`
 
-Now we can use jq as a JSON processor to better consume our API data:
+Now we can use jq as a JSON processor to better consume our **SPOONful** of API data:
 
 `curl http://127.0.0.1:3000/api | jq`
 
