@@ -3,6 +3,7 @@
     "description": "Learn how to create and use Flox environments in an existing project.",
     "details": {
         "intro": {
+            "title": "Intro",
             "text": "intro/intro.md"
         },
         "steps": [
@@ -17,8 +18,22 @@
             },
             {
                 "text": "step4/step4.md"
+            },
+            {
+                "text": "step5/step5.md"
+            },
+            {
+                "text": "step6/step6.md"
+            },
+            {
+                "text": "step7/step7.md"
             }
-        ]
+        ],
+        "finish": {
+            "title": "Finish",
+            "test": "finish/finish.md",
+            "foreground": "finish/foreground.sh"
+        }
     },
     "backend": {
         "imageid": "ubuntu"

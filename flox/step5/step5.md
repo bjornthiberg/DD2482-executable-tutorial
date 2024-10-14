@@ -1,36 +1,29 @@
-Now that we've seen Flox in action, let's take a look at how it organizes an environment in a clean way.
+Adding a dependecy to our environment was quite easy, right?
 
-Let's have a look at what is inside the .flox directory. To do this, we can use the "tree" command to get a prettier view.
+Let's add another one so we can better process the API data. This one will not be related to Python, to highlight the universal nature of Flox as a package manager.
 
-It's not available by default on Ubuntu, but of course we can install it as a Flox package!
+`jq`{{}} is a great tool for processing JSON formatted data. This could of course be installed using brew, apt, or any other package manager, however with Flox we can bundle `jq`{{}} with the rest of the development environment to enable our fellow developers who also work on this project to have direct acces to it.
 
-`flox install tree`
+First, let us see what packages Flox has available related to jq:
 
-Now, let's run it to get a view of the structure of the .flox directory:
+`flox search jq`
 
-`tree .flox -L 2`
+As we can see from the description, the first option is the JSON processor we want to install.
 
-Here we have some logs and the cached python installation. We can also see a symlink hinting to the fact that Flox uses interacts with Nix behind the scenes.
+Next, let us see which versions are available in the Flox repositories.
 
-However, most important from a user's perspective is this:
+`flox show jq`
 
-- env/manifest.toml
-- env/manifest.lock
+We could now install the default (latest) version, but let's instead choose a specific version of the package by adding a `@version`{{}}:
 
-This is a declarative manifest in TOML format and its lockfile. Together, they can be used to reproduce the environment on another machine.
+`flox install jq@1.7.1`
 
-For example, what we have done so far will have added something like this to under the [install] header:
+To confirm that we have installed jq correctly, run the following command to see that it is in our $PATH.
 
-```
-[install]
-python3 = { pkg-path = "python3" }
-flask.pkg-path = "python312Packages.flask"
-jq.pkg-path = "jq"
-jq.version = "1.7.1"
-tree.pkg-path = "tree"
-```
+`which jq`
 
-The manifest can be edited with `flox edit`. You can read more about the specific contents of the manifest file [here](https://flox.dev/docs/concepts/manifest/).
+Now we can use jq as a JSON processor to better consume our API data:
 
-For now, let's move on to looking at how we can use environment variables and services in Flox!
+`curl http://127.0.0.1:3000/api | jq`
 
+As a next step, let's look into how the flox environment files are structured.

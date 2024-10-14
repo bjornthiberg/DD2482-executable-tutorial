@@ -13,10 +13,10 @@ We can now proceed to initialize our Flox environment for the project by running
 
 Flox will infer that we are working on a python project, and using the  `--auto-setup` option will automatically proceed to include a python installation in our environment.
 
-Basically, `flox init` does the following:
+Basically, `flox init`{{}} does the following:
 - Creates a new Flox environment, with the same name as the directory.
-- Creates a `.flox` directory with a few configuration files (which can be checked into source control!).
-- Notices that we have a `requirements.txt` file, and provides us with a Python virtual environment.
+- Creates a `.flox`{{}} directory with a few configuration files (which can be checked into source control!).
+- Notices that we have a `requirements.txt`{{}} file, and provides us with a Python virtual environment.
 
 We will take a closer look at the contents of the .flox directory later.
 

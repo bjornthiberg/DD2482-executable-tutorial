@@ -1,29 +1,26 @@
-Adding a dependecy to our environment was quite easy, right?
 
-Let's add another one so we can better process the API data. This one will not be related to Python, to highlight the universal nature of Flox as a package manager.
+We are going to install Flask as a package from the Flox Catalog (which uses [nixpkgs](https://github.com/NixOS/nixpkgs) behind the scenes).
 
-`jq` is a great tool for processing JSON formatted data. This could of course be installed using brew, apt, or any other package manager, however with Flox we can bundle `jq` with the rest of the development environment to enable our fellow developers who also work on this project to have direct acces to it.
+As it uses the Nix, we have access to over 100 000 packages, and Flask is no exception. With Flox, we can ditch our Python package manager for something that works universally across all languages!
 
-First, let us see what packages Flox has available related to jq:
+To do this, we search for the Flask package using the built-in search functionality:
 
-`flox search jq`
+`flox search flask`
 
-As we can see from the description, the first option is the JSON processor we want to install.
+We get several options, but as we are using python 3.12, it makes sense to install the corresponding Flask package:
 
-Next, let us see which versions are available in the Flox repositories.
+`flox install python312Packages.flask`
 
-`flox show jq`
+We get a response from flox that Flask was installed to our environment. 
 
-We could now install the default (latest) version, but let's instead choose a specific version of the package by adding a `@version`:
+Now, let's run the Flask application again. This time, we also append a '&', so that we can have it run as a background process:
 
-`flox install jq@1.7.1`
+`python run.py &`
 
-To confirm that we have installed jq correctly, run the following command to see that it is in our $PATH.
+Let's double-check that the server is up and running, by sending a request to the api:
 
-`which jq`
+`curl 127.0.0.1:3000/api`
 
-Now we can use jq as a JSON processor to better consume our API data:
+If everything worked correctly, you should now see a response from the Flask API!
 
-`curl http://127.0.0.1:3000/api | jq`
-
-As a next step, let's look into how the flox environment files are structured.
+Now, let's see how we can add a completely new package, outside of Python.
