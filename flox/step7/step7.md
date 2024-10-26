@@ -9,8 +9,8 @@ Let us run `flox edit` and enter the following under the [vars] header:
 
 ```
 [vars]
-FLASK_ENV=development
-FLASK_DEBUG=1
+FLASK_ENV="development"
+FLASK_DEBUG="1"
 ```
 
 In order to make changes to a file nagivate to the line you want to edit, and enter `i` for insert mode.
@@ -27,8 +27,7 @@ Let us run `flox edit` and add a Flask service under the [services] header:
 
 ```
 [services.flask]
-command = flask run
-vars.port = 3000
+command = "flask run --port 3000"
 ```
 
 As our Flox environment is already up and running, these services will not automatically start.
