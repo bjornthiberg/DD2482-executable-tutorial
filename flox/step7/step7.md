@@ -19,7 +19,7 @@ When in normal mode you can press `:` to enter command mode, in which you can ty
 
 
 # Services
-Flox also allows us to configure `services`{{}}, which are any long-running programs which are application are dependent on. Any programs or applications defined as `services`{{}} will automatically run when the Flox environment is activated.
+Flox also allows us to configure `services`{{}}, which are any long-running programs which are application are dependent on. Any programs or applications defined as `services`{{}} can be automatically run when the Flox environment is activated by the command `flox acticate --start-services`.
 
 For our scenario we can configure the manifest such that our Flask server, with our already defined environment variables, is up and running in debug mode when we activate the environment.
 
@@ -34,7 +34,7 @@ As our Flox environment is already up and running, these services will not autom
 
 Let us first terminate the current Flask application by running `fg` followed by entering `Ctrl-C`
 
-We can now run the command `flox services start` in order to activate our defined Flask service.
+Some changes to the manifest require reloading the environment, which flox will prompt the user for. In this case, run `exit`, and then reactivate the environment with the command `flox acticate --start-services`
 
 If we were to make further changes to the services defined in our manifest, we could also activate these changes by running the command `flox services restart`.
 
