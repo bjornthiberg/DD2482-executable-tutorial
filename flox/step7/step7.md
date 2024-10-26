@@ -42,4 +42,4 @@ Finally, if we want to terminate our services we would run `flox services stop`
 
 While our services are running, we can check their status by running the command `flox services status`.
 
-If we instead want to view the logs of a given service we can run the following `flox services logs --follow`
+If we instead want to view the logs of a given service, in our case flask, we can run the following `flox services logs flask`
